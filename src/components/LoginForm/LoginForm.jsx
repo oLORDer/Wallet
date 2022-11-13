@@ -4,8 +4,16 @@ import Logo from '../shared/Logo';
 import { Button } from 'components/shared';
 import TextField from 'components/shared/TextField';
 
-const Section = styled.section`
+const Wrapper = styled.div`
   padding-top: 107px;
+  background-color: #fff;
+  border-radius: 20px;
+
+  @media screen and (min-width: 768px) {
+    width: 533px;
+    border: 1px solid red;
+  }
+
   img.logo {
     margin-bottom: 60px;
     margin-left: auto;
@@ -23,20 +31,18 @@ const Section = styled.section`
 
 export default function LoginForm() {
   return (
-    <Section>
-      <div className="container">
-        <Logo />
-        <form>
-          <label>
-            <TextField type="email" placeholder={'E-mail'} />
-          </label>
-          <label>
-            <TextField type="password" placeholder={'Password'} />
-          </label>
-        </form>
-        <Button text="log in" type="submit" pattern="accent" />
-        <Button text="register" type="submit" />
-      </div>
-    </Section>
+    <Wrapper>
+      <Logo />
+      <form>
+        <label>
+          <TextField type="email" placeholder={'E-mail'} />
+        </label>
+        <label>
+          <TextField type="password" placeholder={'Password'} />
+        </label>
+      </form>
+      <Button text="log in" type="submit" pattern="accent" />
+      <Button text="register" type="submit" />
+    </Wrapper>
   );
 }

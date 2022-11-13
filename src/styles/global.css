@@ -1,3 +1,10 @@
-img {
-  display: block;
+body {
+  font-family: Circle;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  background-color: #fff;
+}
+
+body.no-scroll {
+  overflow: hidden;
 }

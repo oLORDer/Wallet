@@ -3,6 +3,9 @@ import styled from 'styled-components';
 const Btn = styled.button`
   width: 280px;
   height: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 18px;
   background-color: #fff;
   text-transform: uppercase;
