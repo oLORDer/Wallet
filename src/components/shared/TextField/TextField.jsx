@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import lock from '../../images/lock.svg';
+// import lock from '../../images/icons/lock.svg';
 
 const Field = styled.input`
   border: none;
@@ -32,6 +32,26 @@ const Field = styled.input`
   } */
 `;
 
-export default function TextField({ type = 'text', placeholder }) {
-  return <Field type={type} placeholder={placeholder} />;
+export default function TextField({
+  type,
+  name,
+  value,
+  handleChange,
+  placeholder,
+  required,
+  pattern,
+  title,
+}) {
+  return (
+    <Field
+      type={type}
+      name={name}
+      value={value}
+      onChange={handleChange}
+      required={required}
+      pattern={pattern}
+      title={title}
+      placeholder={placeholder}
+    />
+  );
 }

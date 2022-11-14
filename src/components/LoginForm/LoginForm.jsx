@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
-import Logo from '../shared/Logo';
-import { Button } from 'components/shared';
+import Logo from '../shared/Logo/Logo';
+import Button from 'components/shared/Button';
 import TextField from 'components/shared/TextField';
+import { field } from 'components/shared/TextField/fields';
 
 const Wrapper = styled.div`
   padding-top: 107px;
@@ -10,8 +11,8 @@ const Wrapper = styled.div`
   border-radius: 20px;
 
   @media screen and (min-width: 768px) {
+    padding: 40px 60px 60px 60px;
     width: 533px;
-    border: 1px solid red;
   }
 
   img.logo {
@@ -35,10 +36,10 @@ export default function LoginForm() {
       <Logo />
       <form>
         <label>
-          <TextField type="email" placeholder={'E-mail'} />
+          <TextField {...field.email} />
         </label>
         <label>
-          <TextField type="password" placeholder={'Password'} />
+          <TextField {...field.password} />
         </label>
       </form>
       <Button text="log in" type="submit" pattern="accent" />

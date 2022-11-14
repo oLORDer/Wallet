@@ -66,4 +66,4 @@ const Button = ({ text, type = 'button', pattern }) => {
   );
 };
 
-export { Button };
+export default Button;

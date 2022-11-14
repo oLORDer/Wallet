@@ -5,8 +5,10 @@ import Loader from '../Loader';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 
-const LoginPage = lazy(() => import('../../pages/LoginPage'));
-const RegisterPage = lazy(() => import('../../pages/RegisterPage'));
+const LoginPage = lazy(() => import('../../pages/LoginPage/LoginPage'));
+const RegisterPage = lazy(() =>
+  import('../../pages/RegisterPage/RegisterPage')
+);
 const PrivatePage = lazy(() => import('../../pages/PrivatePage'));
 
 const UserRoutes = () => {
