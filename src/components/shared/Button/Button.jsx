@@ -12,11 +12,11 @@ const Btn = styled.button`
   border-radius: 20px;
   cursor: pointer;
 
-  color: var(--secondary-color);
-  border-color: var(--secondary-color);
+  color: ${({ theme }) => theme.colors.secondary};
+  border-color: ${({ theme }) => theme.colors.secondary};
 
   &.accent {
-    background-color: var(--accent-color);
+    background-color: ${({ theme }) => theme.colors.accent};
     color: #fff;
     border: none;
   }
@@ -27,7 +27,7 @@ const Btn = styled.button`
     justify-content: center;
     width: 44px;
     height: 44px;
-    background-color: var(--accent-color);
+    background-color: ${({ theme }) => theme.colors.accent};
     color: #fff;
     border: none;
     border-radius: 100%;

@@ -1,10 +1,16 @@
 import UserRoutes from './Routes/UserRoutes';
-import { Button } from './shared/Button';
+import GlobalStyles from '../styles/global.ts';
+import { ThemeProvider } from 'styled-components';
+
+import { baseTheme } from 'styles/theme.ts';
 
 export const App = () => {
   return (
     <>
-      <UserRoutes />
+      <ThemeProvider theme={baseTheme}>
+        <UserRoutes />
+        <GlobalStyles />
+      </ThemeProvider>
     </>
   );
 };

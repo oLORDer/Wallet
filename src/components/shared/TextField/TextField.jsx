@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Field = styled.input`
   border: none;
   border-bottom: 1px solid;
-  border-color: var(--input-color);
+  border-color: ${({ theme }) => theme.colors.input};
   width: 100%;
   font-size: 18px;
   line-height: 1.5;
